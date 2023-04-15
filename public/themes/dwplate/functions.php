@@ -1,4 +1,5 @@
 <?php
+
 function dwplate_load_files($dir, $files, string $prefix = '')
 {
     foreach ($files as $file) {
@@ -9,6 +10,6 @@ function dwplate_load_files($dir, $files, string $prefix = '')
 }
 
 dwplate_load_files(get_template_directory() . '/config/', [
-    'register',
     'setup_theme',
+    'register',
 ]);

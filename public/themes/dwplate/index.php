@@ -9,9 +9,14 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <?php get_header(); ?>
-    <main role="main" class="dwplate">
-        <h1>Template by Dawudesign</h1>
-    </main>
+    <?php if (have_posts()) :  ?>
+        <?php while (have_posts()) :
+            the_post(); ?>
+            <main role="main">
+                <?php get_template_part('layouts/posts/_index'); ?>
+            </main>
+        <?php endwhile; ?>
+    <?php endif; ?>
     <?php get_footer(); ?>
 </body>
 
