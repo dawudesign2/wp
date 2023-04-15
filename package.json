@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite", 
+    "php": "php -S localhost:3000 -t public/"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
